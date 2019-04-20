@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: 王旭
 subtitle:
 description:
 keywords:
-author: John Doe
-language:
+author: 王旭
+language: zh-Hans
 timezone:
 
 # URL
@@ -80,4 +80,4 @@ theme: next
 deploy:
   type: git 
   repo: git@github.com:wx4625820/wx4625820.github.io.git
-  branch: published
+  branch: master
