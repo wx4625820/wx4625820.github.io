@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="王旭">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://pouz2irgz.bkt.clouddn.com/gratisography-lonely-road-blue-sky.jpg">
-<meta property="og:updated_time" content="2019-04-21T10:43:49.141Z">
+<meta property="og:updated_time" content="2019-04-21T11:09:47.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="bean与component的区别">
 <meta name="twitter:image" content="http://pouz2irgz.bkt.clouddn.com/gratisography-lonely-road-blue-sky.jpg">
@@ -351,13 +351,13 @@
       
 
       
-        <p><img src="http://pouz2irgz.bkt.clouddn.com/gratisography-lonely-road-blue-sky.jpg" alt><br>                                <a id="more"></a><br>首先我们看看这两个注解的作用：</p>
-<ul>
+        <p><img src="http://pouz2irgz.bkt.clouddn.com/gratisography-lonely-road-blue-sky.jpg" alt><br>                                <a id="more"></a></p>
+<h4 id="首先我们看看这两个注解的作用："><a href="#首先我们看看这两个注解的作用：" class="headerlink" title="首先我们看看这两个注解的作用："></a>首先我们看看这两个注解的作用：</h4><ul>
 <li>@Component注解表明一个类会作为组件类，并告知Spring要为这个类创建bean。</li>
 <li>@Bean注解告诉Spring这个方法将会返回一个对象，这个对象要注册为Spring应用上下文中的bean。通常方法体中包含了最终产生bean实例的逻辑。</li>
 </ul>
-<p>两者的目的是一样的，都是注册bean到Spring容器中。<br>@Component（@Controller、@Service、@Repository）通常是通过类路径扫描来自动侦测以及自动装配到Spring容器中，而@Bean注解通常是我们在标有该注解的方法中定义产生这个bean的逻辑。<br>举个例子：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="comment">//在这里用Component，Controller，Service，Repository都可以起到相同的作用。</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(″/web/controller1″)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebController</span> </span>&#123;</span><br><span class="line">    .....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>而@Bean则更加灵活，当我们引用第三方库中的类库需要转配到Spring容器时，则只能通过@Bean实现。<br>举个例子<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> OneService <span class="title">getService</span><span class="params">(status)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> (status)  &#123;</span><br><span class="line">        when <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> serviceImpl1();</span><br><span class="line">        when <span class="number">2</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> serviceImpl2();</span><br><span class="line">        when <span class="number">3</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> serviceImpl3();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="两者的目的是一样的，都是注册bean到Spring容器中。"><a href="#两者的目的是一样的，都是注册bean到Spring容器中。" class="headerlink" title="两者的目的是一样的，都是注册bean到Spring容器中。"></a>两者的目的是一样的，都是注册bean到Spring容器中。</h4><p>@Component（@Controller、@Service、@Repository）通常是通过类路径扫描来自动侦测以及自动装配到Spring容器中，而@Bean注解通常是我们在标有该注解的方法中定义产生这个bean的逻辑。<br>举个例子：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="comment">//在这里用Component，Controller，Service，Repository都可以起到相同的作用。</span></span><br><span class="line"><span class="meta">@RequestMapping</span>(″/web/controller1″)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebController</span> </span>&#123;</span><br><span class="line">    .....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="而-Bean则更加灵活，当我们引用第三方库中的类库需要转配到Spring容器时，则只能通过-Bean实现。"><a href="#而-Bean则更加灵活，当我们引用第三方库中的类库需要转配到Spring容器时，则只能通过-Bean实现。" class="headerlink" title="而@Bean则更加灵活，当我们引用第三方库中的类库需要转配到Spring容器时，则只能通过@Bean实现。"></a>而@Bean则更加灵活，当我们引用第三方库中的类库需要转配到Spring容器时，则只能通过@Bean实现。</h4><p>举个例子<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Bean</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> OneService <span class="title">getService</span><span class="params">(status)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> (status)  &#123;</span><br><span class="line">        when <span class="number">1</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> serviceImpl1();</span><br><span class="line">        when <span class="number">2</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> serviceImpl2();</span><br><span class="line">        when <span class="number">3</span>:</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> serviceImpl3();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>以上这个例子是无法用Component以及其具体实现注解（Controller、Service、Repository）来实现的。<br>总结：@Component和@Bean都是用来注册Bean并装配到Spring容器中，但是Bean比Component的自定义性更强。可以实现一些Component实现不了的自定义加载类。</p>
 
       
@@ -433,8 +433,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -494,6 +503,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#首先我们看看这两个注解的作用："><span class="nav-number">1.</span> <span class="nav-text">首先我们看看这两个注解的作用：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#两者的目的是一样的，都是注册bean到Spring容器中。"><span class="nav-number">2.</span> <span class="nav-text">两者的目的是一样的，都是注册bean到Spring容器中。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#而-Bean则更加灵活，当我们引用第三方库中的类库需要转配到Spring容器时，则只能通过-Bean实现。"><span class="nav-number">3.</span> <span class="nav-text">而@Bean则更加灵活，当我们引用第三方库中的类库需要转配到Spring容器时，则只能通过@Bean实现。</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
