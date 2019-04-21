@@ -1,9 +1,9 @@
 ---
 title: bean与component的区别
 date: 2019-04-20 18:47:52
-tags:
+tags: Java
 ---
-![](http://posw9yxeh.bkt.clouddn.com/images/common/gratisography-157-thumbnail-small.jpg)
+![](http://pouz2irgz.bkt.clouddn.com/gratisography-lonely-road-blue-sky.jpg)
                                 <!-- more -->
 首先我们看看这两个注解的作用：
 * @Component注解表明一个类会作为组件类，并告知Spring要为这个类创建bean。
