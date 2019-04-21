@@ -1,7 +1,8 @@
 ---
 title: bean与component的区别
 date: 2019-04-20 18:47:52
-tags: Java
+tags: 注解
+categories: Java
 ---
 ![](http://pouz2irgz.bkt.clouddn.com/gratisography-lonely-road-blue-sky.jpg)
                                 <!-- more -->
