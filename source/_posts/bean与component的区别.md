@@ -5,7 +5,7 @@ tags: 注解
 categories: Java
 ---
 ![](http://pouz2irgz.bkt.clouddn.com/gratisography-lonely-road-blue-sky.jpg)
-                                <!-- more -->
+<!-- more -->
 首先我们看看这两个注解的作用：
 * @Component注解表明一个类会作为组件类，并告知Spring要为这个类创建bean。
 * @Bean注解告诉Spring这个方法将会返回一个对象，这个对象要注册为Spring应用上下文中的bean。通常方法体中包含了最终产生bean实例的逻辑。
